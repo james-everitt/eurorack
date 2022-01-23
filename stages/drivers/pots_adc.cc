@@ -35,24 +35,24 @@ namespace stages {
 /* static */
 uint8_t PotsAdc::mux_address_to_pot_index_[kNumMuxAddresses] = {
   0xff,
-  2,
-  4,
-  1,
   3,
-  0,
-  0xff,
+  1,
+  4,
+  2,
   5,
+  0xff,
+  0,
 };
 
 /* static */
 uint8_t PotsAdc::mux_address_to_slider_index_[kNumMuxAddresses] = {
-  3,
   2,
-  1,
+  3,
   4,
-  0,
-  0xff,
+  1,
   5,
+  0xff,
+  0,
   0xff,
 };
 
@@ -146,7 +146,7 @@ void PotsAdc::Convert() {
     if (slider_index != 0xff) {
       // Due to the odd PCB layout, some sliders are rotated 180 degrees.
       // We need to flip the readout for those.
-      uint16_t mask = slider_index == 0 || slider_index == 5 ? 0xffff : 0x0000;
+      uint16_t mask = slider_index == 1 || slider_index == 2 || slider_index == 3 || slider_index == 4 ? 0xffff : 0x0000;
       values_[ADC_GROUP_SLIDER + slider_index] = adc_values_[1] ^ mask;
     }
     slider_index_ = slider_index;
