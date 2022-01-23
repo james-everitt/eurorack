@@ -40,12 +40,12 @@ struct SwitchDefinition {
 };
 
 const SwitchDefinition switch_definitions[] = {
-  { GPIOC, GPIO_Pin_0 },
-  { GPIOC, GPIO_Pin_1 },
-  { GPIOC, GPIO_Pin_2 },
-  { GPIOC, GPIO_Pin_3 },
+  { GPIOA, GPIO_Pin_1 },
   { GPIOA, GPIO_Pin_0 },
-  { GPIOA, GPIO_Pin_1 }
+  { GPIOC, GPIO_Pin_3 },
+  { GPIOC, GPIO_Pin_2 },
+  { GPIOC, GPIO_Pin_1 },
+  { GPIOC, GPIO_Pin_0 }
 };
 
 void Switches::Init() {
