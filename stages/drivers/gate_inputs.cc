@@ -41,12 +41,12 @@ struct GateInputDefinition {
 };
 
 const GateInputDefinition gate_input_definition[] = {
-  { GPIOA, GPIO_Pin_11 },
-  { GPIOA, GPIO_Pin_10 },
-  { GPIOA, GPIO_Pin_9 },
-  { GPIOA, GPIO_Pin_8 },
-  { GPIOC, GPIO_Pin_8 },
   { GPIOC, GPIO_Pin_7 },
+  { GPIOC, GPIO_Pin_8 },
+  { GPIOA, GPIO_Pin_8 },
+  { GPIOA, GPIO_Pin_9 },
+  { GPIOA, GPIO_Pin_10 },
+  { GPIOA, GPIO_Pin_11 },
 };
 
 void GateInputs::Init() {
