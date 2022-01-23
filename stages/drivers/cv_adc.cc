@@ -49,20 +49,20 @@ struct ConverterConfiguration {
 const ConverterConfiguration converter_configuration[3] = {
   {
     SDADC1, DMA2_Channel3, 2, {
-      { 4, SDADC_Channel_5, GPIOB, GPIO_Pin_1 },
-      { 5, SDADC_Channel_6, GPIOB, GPIO_Pin_0 },
+      { 1, SDADC_Channel_5, GPIOB, GPIO_Pin_1 },
+      { 0, SDADC_Channel_6, GPIOB, GPIO_Pin_0 },
     }
   },
   {
     SDADC2, DMA2_Channel4, 2, {
-      { 3, SDADC_Channel_7, GPIOE, GPIO_Pin_9 },
-      { 2, SDADC_Channel_8, GPIOE, GPIO_Pin_8 }
+      { 2, SDADC_Channel_7, GPIOE, GPIO_Pin_9 },
+      { 3, SDADC_Channel_8, GPIOE, GPIO_Pin_8 }
     }
   },
   {
     SDADC3, DMA2_Channel5, 2, {
-      { 1, SDADC_Channel_7, GPIOB, GPIO_Pin_15 },
-      { 0, SDADC_Channel_8, GPIOB, GPIO_Pin_14 }
+      { 4, SDADC_Channel_7, GPIOB, GPIO_Pin_15 },
+      { 5, SDADC_Channel_8, GPIOB, GPIO_Pin_14 }
     }
   },
 };
